@@ -6,12 +6,9 @@ library(tidyr)
 library(dplyr)
 library(caret)
 library(purrr)
-install.packages("caret")
 
-setwd("C:\\Users\\m.vilkaite\\Desktop\\Kaggle\\20180422_House_prices\\3. Uploaded Data")
-
-test <- read_csv("test.csv", col_names = TRUE)
-train <- read_csv("train.csv", col_names = TRUE)
+test <- read_csv("Input/test.csv", col_names = TRUE)
+train <- read_csv("Input/train.csv", col_names = TRUE)
 
 glimpse(test)
 glimpse(train)
@@ -60,3 +57,5 @@ ggplot(train, aes(x = SalePrice)) +
 
 ggplot(train, aes(y = log(SalePrice), x = YearBuilt)) +
   geom_point()
+
+
